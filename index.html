@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>To-Do List</h1>
+<div>
+    <!-- Task Input Section -->
+    <input id="task-input" type="text" placeholder="Add a new task">
+    <input id="date-input" type="date" placeholder="Due Date">
+    <select id="category-input">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="College">College</option>
+    </select>
+    <select id="priority-input">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+    <button id="add-task">Add Task</button>
+</div>
+
+<!-- Filter Section -->
+<div>
+    <h3>Filters:</h3>
+    <select id="category-filter">
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="College">College</option>
+    </select>
+    <label>
+        <input type="radio" name="filter" value="All" id="status-all" checked> All
+    </label>
+    <label>
+        <input type="radio" name="filter" value="Pending" id="status-pending"> Pending
+    </label>
+    <label>
+        <input type="radio" name="filter" value="Completed" id="status-completed"> Completed
+    </label>
+</div>
+
+<!-- Search Section -->
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="Search tasks by name, category, or priority">
+    <button id="search-button">Search</button>
+    <button id="clear-search">Clear</button>
+</div>
+
+<!-- Message for No Tasks -->
+<div id="no-task-message" style="display: none; text-align: center; color: red; font-size: 18px; margin-top: 10px;">
+    No such task found.
+</div>
+
+<!-- Task List -->
+<ul id="task-list"></ul>
+
+<!-- Include JavaScript File -->
+<script src="app.js"></script>
+</body>
+</html>
